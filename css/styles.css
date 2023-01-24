@@ -338,7 +338,16 @@ screen and (min-resolution: 2dppx) and (min-width: 481px) {
     border: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media screen and (min-width: 768px) {
+    .hero-btn {
+        margin-top: 40px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .hero-btn {
+        margin-top: 48px;
+    }
+}
 .hero-btn:focus,
 .hero-btn:hover {
     background: var(--brand-color);
@@ -353,6 +362,18 @@ screen and (min-resolution: 2dppx) and (min-width: 481px) {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+}
+@media screen and (max-width: 1199.98px) {
+    .advantages {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .advantages {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 .advantages-container  {
@@ -371,19 +392,12 @@ screen and (min-resolution: 2dppx) and (min-width: 481px) {
 }
 @media screen and (min-width: 1200px) {
     .advantages-container {
-        padding-top: 120px;
-        padding-bottom: 120px;
         padding-left: 15px;
         padding-right: 15px;
         max-width: 1158px;
     }
 }
-@media screen and (max-width: 1199.98px) {
-    .advantages-container {
-        padding-top: 96px;
-        padding-bottom: 96px;
-    }
-}
+
 @media screen and (max-width: 1199.98px) and (min-width: 768px),
 screen and (max-width: 1199.98px){
     .advantages-container {
@@ -598,24 +612,15 @@ screen and (max-width: 1199.98px) {
 }
 
 .meet {
-    min-width: 320px; 
-    max-width: 428px;
     background-color: #F4F4FD;
 }
 @media screen and (min-width: 428px) {
     .meet {
-        max-width: 428px;
         margin: auto;
-    }
-}
-@media screen and (min-width: 768px) {
-    .meet {
-        max-width: 768px;
     }
 }
 @media screen and (min-width: 1200px) {
     .meet {
-        max-width: 1200px;
         padding-top: 120px;
         padding-bottom: 120px;
     }
@@ -939,7 +944,6 @@ screen and (max-width: 1199.98px) {
 }
 
 .footer-subscribe-text {
-    display: flex;
     margin-bottom: 16px;
 
     font-weight: 500;
@@ -1162,7 +1166,6 @@ input::placeholder {
     height: 300px;
     padding: 40px 32px;
 
-
     transform: translateY(100%);
     background-color: var(--accent-color);
     transition-duration: 250ms;
@@ -1177,6 +1180,9 @@ input::placeholder {
 }
 
 .card:hover .overlay-thumb {
+    transform: translateX(0);
+}
+.card:focus .overlay {
     transform: translateX(0);
 }
 
